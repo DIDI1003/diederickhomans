@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | DIDI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+
+  <style>
+    .video-popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .video-popup.active {
+      display: flex;
+    }
+
+    .video-popup video {
+      max-width: 90%;
+      max-height: 80vh;
+      border-radius: 12px;
+    }
+
+    .video-popup .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 2rem;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">DIDI = DELTA</div>
+        <div class="nav-links">
+          <a href="#projecten">Projecten</a>
+          <a href="#overmij">Over mij</a>
+          <a href="#ambitie">Ambitie</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-flex">
+      <div class="hero-text">
+        <h1>Create a Difference</h1>
+        <p>Ik ben Diederick, een CMD-student die gelooft dat alles kan veranderen. Wat negatief is, kan positief worden. Wat kleurloos is, kan gaan stralen. Via video, design en betekenisvolle concepten wil ik impact maken. Dit is mijn pad.</p>
+      </div>
+      <div class="hero-image">
+        <img src="images/DIDI.png" alt="DIDI Prisma" />
+      </div>
+    </div>
+  </section>
+
+  <section id="projecten" class="projects">
+    <div class="container">
+      <h2>Projecten</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <img src="images/DIDI.png" alt="Create a Difference" />
+          <div class="project-info">
+            <h3>Create a Difference</h3>
+            <p>Beeldtaalposter waarin ik verandering visueel maak via een prisma. Gemaakt in Illustrator en Photoshop.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/avatar.png" alt="Avatar ontwerp" />
+          <div class="project-info">
+            <h3>Avatar</h3>
+            <p>Mijn held met prisma-kracht: zet negativiteit om in kleur en licht. Ontwikkeld vanuit schets en concept.</p>
+          </div>
+        </div>
+        <div class="project-card" onclick="openVideo()">
+          <img src="images/5 redenen.png" alt="Mobisitie Ameland" />
+          <div class="project-info">
+            <h3>Mobisitie: Ameland</h3>
+            <p>Een animatievideo met argumenten om je auto thuis te laten. Gemaakt in Premiere Pro en After Effects.</p>
+          </div>
+        </div>
+        <div class="project-card">
+          <img src="images/monogram.png" alt="Monogram ontwerp" />
+          <div class="project-info">
+            <h3>Monogram</h3>
+            <p>Mijn initialen als beeldmerk: beweging, muziek en identiteit komen samen. Gemaakt in Illustrator.</p>
+          </div>
+        </div>
+        <div class="project-card">
+  <img src="images/Malawi.png" alt="Project Malawi" />
+  <div class="project-info">
+    <h3>Malawi 2025 – Bouwen aan Verandering</h3>
+    <p>Van 16 juli tot 4 augustus 2025 ga ik met World Servants naar het dorpje <strong>Mphunju</strong> in Malawi. Daar help ik met het bouwen van <strong>lerarenwoningen</strong> voor beter onderwijs. Tijdens deze reis ben ik de <strong>videograaf</strong> van het team: ik leg het bouwproces, de cultuur en de samenwerking vast. Zo bouw ik niet alleen voor een ander, maar ook aan mijzelf.</p>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+   <section id="ambitie" class="ambition">
+    <div class="container">
+      <h2>Ambitie</h2>
+      <p>Ik wil verhalen vertellen die blijven hangen. Niet zomaar mooie beelden maken, maar betekenis geven aan wat ik zie en voel — en dat doorvertalen naar werk dat iets doet met mensen. Mijn ambitie als CMD’er is om te groeien als <strong>visual storyteller</strong> en <strong>videograaf</strong> met een sterke ethische onderlaag. Ik wil impact maken met beeld, geluid en gevoel.</p>
+
+      <p>Ik geloof dat ontwerp en media niet alleen entertainen, maar ook bewustzijn kunnen vergroten, verbinden en zelfs levens kunnen veranderen. Daarom wil ik werken bij of samenwerken met organisaties die maatschappelijke waarde centraal stellen — in de zorg, het onderwijs, ontwikkelingswerk of sociale campagnes. Mijn droom is om betrokken te zijn bij projecten die échte verhalen vertellen: kwetsbaar, eerlijk, visueel krachtig.</p>
+
+      <p>Mijn talent ligt in het combineren van inhoud en vorm. Waar anderen misschien beginnen met pixels of post-productie, begin ik bij betekenis. Ik stel vragen: <em>Waarom maken we dit? Voor wie? Wat moet het aanwakkeren?</em> Die vragen vertaal ik vervolgens naar beeld: met kleur, compositie, tempo en ritme — zoals ik ook met piano speel: met gevoel en aandacht.</p>
+
+      <p>De komende jaren wil ik me verder ontwikkelen in:</p>
+      <ul>
+        <li><strong>Camera- en regiewerk</strong>: sterker worden in het vangen van sfeer en emoties op locatie.</li>
+        <li><strong>Video-editing en sound design</strong>: om het ritme en de beleving nog krachtiger te maken.</li>
+        <li><strong>Documentaire of reportagestijl</strong>: omdat ik daar mijn gevoel voor echtheid, storytelling en maatschappelijke thema’s in kwijt kan.</li>
+        <li><strong>Ethisch ontwerpen</strong>: ontwerpen met waarden als eerlijkheid, eenvoud en transparantie.</li>
+      </ul>
+
+      <p>Tijdens mijn reis naar <strong>Malawi</strong> als videograaf voor World Servants zie ik een kans om die ambitie in de praktijk te brengen. Ik ga daar bouwen voor een ander — letterlijk — maar óók bouwen aan mijn eigen verhaal. Door met beeld bij te dragen aan een project met betekenis, groeit mijn ambitie verder: om visueel werk te maken dat ertoe doet.</p>
+
+      <p>Uiteindelijk wil ik geen ‘maker’ zijn, maar een <strong>bouwer van verandering</strong>.</p>
+    </div>
+  </section>
+
+
+  <section id="overmij" class="about">
+    <div class="container">
+      <h2>Over Mij</h2>
+      <p>Mijn naam is Diederick Douwe Benjamin Homans – maar noem me gerust DIDI. Ik ben een CMD-student aan de Hanzehogeschool die gelooft dat ontwerp méér kan zijn dan mooi: het kan iets veranderen. Wat ik ontwerp is bedoeld om negativiteit om te buigen, vastzittende systemen open te breken en kleur te brengen op plekken waar het grijs is. Dit is wat ik mijn ‘prisma-gedachte’ noem: licht transformeren tot betekenisvolle kleur.</p>
+      <p>Anderen omschrijven mij als stil, maar gewetensvol. Rechtvaardig, gevoelig en zachtaardig. Ik ben niet altijd makkelijk te peilen, maar wie mij goed kent, ziet iemand die luistert om te begrijpen en die graag wil bijdragen. Ik zie wat anderen missen, zoek naar samenhang en probeer altijd te verbinden.</p>
+      <p>Ik ben sportief en muzikaal – ik speel piano, waarin ik gevoel en timing kwijt kan. In mijn ontwerpen wil ik diezelfde diepgang en harmonie vinden. Creativiteit komt voor mij voort uit rust: als ik te veel druk voel, schiet ik in mijn hoofd. Daarom wil ik leren om óók onder tijdsdruk mijn creativiteit te behouden.</p>
+      <p>Mijn ethisch kompas speelt een belangrijke rol in mijn werk. Ik geloof niet in ontwerpen voor haatdragende of schadelijke systemen. Ik wil ontwerpen voor verbinding, voor openheid en voor blijvende impact.</p>
+
+      <h2>Achter de prisma</h2>
+      <img src="images/portret.jpg" alt="Portret van Diederick" style="max-width: 300px; border-radius: 12px; margin: 1rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+
+      <h2>Skills & Interesses</h2>
+      <p>Mijn grootste fascinatie ligt bij <strong>videografie, storytelling en beeldbewerking</strong>. Ik werk veel en graag met <strong>Adobe After Effects</strong>, <strong>Premiere Pro</strong>, en <strong>Illustrator</strong>. Ook fotografie speelt daarin een rol, zeker als ik beelden kan inzetten om een boodschap krachtig te communiceren.</p>
+      <p>Daarnaast werk ik met <strong>HTML, CSS en Figma</strong>. Ik houd van conceptueel denken, van iets kleins iets groots maken, en ik blijf graag leren: hoe meer technieken ik onder de knie heb, hoe sterker mijn beeldtaal wordt.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Wil je samenwerken of meer weten? Neem gerust contact op.</p>
+      <p>Email: <a href="mailto:homansdiederick@gmail.com">homansdiederick@gmail.com</a><br/>
+         Tel: <a href="tel:+31628110364">06 28110364</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 DIDI – Kleuren geïnspireerd door WOEI • Gemaakt met verandering (Δ)</p>
+    </div>
+  </footer>
+
+  <!-- Video popup -->
+  <div id="videoPopup" class="video-popup">
+    <span class="close-btn" onclick="closeVideo()">&times;</span>
+    <video controls>
+      <source src="videos/video-ameland.mp4" type="video/mp4" />
+      Je browser ondersteunt dit videoformaat niet.
+    </video>
+  </div>
+
+  <script>
+    function openVideo() {
+      document.getElementById("videoPopup").classList.add("active");
+    }
+    function closeVideo() {
+      const popup = document.getElementById("videoPopup");
+      const video = popup.querySelector("video");
+      popup.classList.remove("active");
+      video.pause();
+      video.currentTime = 0;
+    }
+  </script>
+</body>
+</html>
