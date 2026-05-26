@@ -1,195 +1,395 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio | DIDI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <style>
-    .video-popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
+  <title>DIDI | Visual Storyteller</title>
 
-    .video-popup.active {
-      display: flex;
-    }
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .video-popup video {
-      max-width: 90%;
-      max-height: 80vh;
-      border-radius: 12px;
-    }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet">
 
-    .video-popup .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 2rem;
-      color: white;
-      cursor: pointer;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="logo">DIDI = DELTA</div>
-        <div class="nav-links">
-          <a href="#projecten">Projecten</a>
-          <a href="#overmij">Over mij</a>
-          <a href="#ambitie">Ambitie</a>
-          <a href="#contact">Contact</a>
-        </div>
+
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="#" class="logo">DIDI Δ</a>
+
+      <nav class="nav-links">
+        <a href="#projecten">Projecten</a>
+        <a href="#over">Over mij</a>
+        <a href="#ambitie">Ambitie</a>
+        <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="hero">
-    <div class="container hero-flex">
-      <div class="hero-text">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <p class="label">Visual Storyteller • CMD-student • Videograaf</p>
+
         <h1>Create a Difference</h1>
-        <p>Ik ben Diederick, een CMD-student die gelooft dat alles kan veranderen. Wat negatief is, kan positief worden. Wat kleurloos is, kan gaan stralen. Via video, design en betekenisvolle concepten wil ik impact maken. Dit is mijn pad.</p>
+
+        <p class="hero-text">
+          Ik ben Diederick Homans, een CMD-student die verandering zichtbaar wil maken.
+          Via video, design en betekenisvolle concepten vertel ik verhalen die niet alleen mooi zijn,
+          maar ook iets losmaken.
+        </p>
+
+        <a href="#projecten" class="button">Bekijk mijn werk</a>
       </div>
+
       <div class="hero-image">
-        <img src="images/DIDI.png" alt="DIDI Prisma" />
+        <img src="images/DIDI.png" alt="DIDI prisma beeldmerk">
       </div>
     </div>
   </section>
 
-  <section id="projecten" class="projects">
+  <section class="intro">
+    <div class="container narrow">
+      <h2>Van achtergrond naar zichtbaar worden</h2>
+
+      <p>
+        Mijn motto is nog steeds <strong>Create a Difference</strong>, maar de betekenis is gegroeid.
+        Ik verander zelf ook: als maker, als vormgever en als mens. Mijn prisma staat voor transformatie,
+        maar soms ook voor het schild waarachter ik mij verschuil. Daarom wil ik mijn werk én mijzelf
+        sterker laten zien.
+      </p>
+    </div>
+  </section>
+
+  <section id="projecten" class="projects section">
     <div class="container">
-      <h2>Projecten</h2>
+      <div class="section-heading">
+        <p class="label">Geselecteerd werk</p>
+        <h2>Projecten</h2>
+      </div>
+
       <div class="project-grid">
-        <div class="project-card">
-          <img src="images/DIDI.png" alt="Create a Difference" />
+
+        <article class="project-card clickable" onclick="openAlmanakPopup()">
+          <img src="images/kaft.jpg" alt="Kaft Almanak Excelsior">
+
           <div class="project-info">
+            <p class="project-type">Editorial Design • Vormgeving</p>
+            <h3>Almanak Excelsior</h3>
+            <p>
+              Een omvangrijk vormgevingsproject met meer dan 350 pagina’s.
+              Binnen het thema Excelsior werkte ik aan een consistente visuele stijl,
+              typografie en art direction. In dit project zit ruim 100 uur werk.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card clickable" onclick="openMalawiVideo()">
+          <img src="images/malawi-banner.png" alt="Malawi Aftermovie">
+
+          <div class="project-info">
+            <p class="project-type">Videografie • Documentaire storytelling</p>
+            <h3>Malawi 2025 – Mphunju</h3>
+            <p>
+              Met World Servants reisde ik naar Malawi, waar we twee lerarenwoningen bouwden.
+              Tijdens deze reis documenteerde ik het volledige proces als videograaf van het team.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <img src="images/DIDI.png" alt="Create a Difference">
+
+          <div class="project-info">
+            <p class="project-type">Beeldtaal • Concept</p>
             <h3>Create a Difference</h3>
-            <p>Beeldtaalposter waarin ik verandering visueel maak via een prisma. Gemaakt in Illustrator en Photoshop.</p>
+            <p>
+              Een beeldtaalposter waarin ik verandering visueel maak via een prisma.
+              Gemaakt in Illustrator en Photoshop.
+            </p>
           </div>
-        </div>
-        <div class="project-card">
-          <img src="images/avatar.png" alt="Avatar ontwerp" />
+        </article>
+
+        <article class="project-card">
+          <img src="images/avatar.png" alt="Avatar ontwerp">
+
           <div class="project-info">
+            <p class="project-type">Illustratie • Conceptontwikkeling</p>
             <h3>Avatar</h3>
-            <p>Mijn held met prisma-kracht: zet negativiteit om in kleur en licht. Ontwikkeld vanuit schets en concept.</p>
+            <p>
+              Een held met prisma-kracht: negativiteit wordt omgezet in kleur en licht.
+            </p>
           </div>
-        </div>
-        <div class="project-card" onclick="openVideo()">
-          <img src="images/5 redenen.png" alt="Mobisitie Ameland" />
+        </article>
+
+        <article class="project-card clickable" onclick="openAmelandVideo()">
+          <img src="images/5 redenen.png" alt="Mobisitie Ameland">
+
           <div class="project-info">
+            <p class="project-type">Motion Design • Animatie</p>
             <h3>Mobisitie: Ameland</h3>
-            <p>Een animatievideo met argumenten om je auto thuis te laten. Gemaakt in Premiere Pro en After Effects.</p>
+            <p>
+              Een animatievideo met argumenten om je auto thuis te laten.
+              Gemaakt in Premiere Pro en After Effects.
+            </p>
           </div>
-        </div>
-        <div class="project-card">
-          <img src="images/monogram.png" alt="Monogram ontwerp" />
+        </article>
+
+        <article class="project-card">
+          <img src="images/monogram.png" alt="Monogram ontwerp">
+
           <div class="project-info">
+            <p class="project-type">Branding • Identiteit</p>
             <h3>Monogram</h3>
-            <p>Mijn initialen als beeldmerk: beweging, muziek en identiteit komen samen. Gemaakt in Illustrator.</p>
+            <p>
+              Mijn initialen als beeldmerk, waarin beweging, muziek en identiteit samenkomen.
+            </p>
           </div>
-        </div>
-        <div class="project-card">
-  <img src="images/Malawi.png" alt="Project Malawi" />
-  <div class="project-info">
-    <h3>Malawi 2025 – Bouwen aan Verandering</h3>
-    <p>Van 16 juli tot 4 augustus 2025 ga ik met World Servants naar het dorpje <strong>Mphunju</strong> in Malawi. Daar help ik met het bouwen van <strong>lerarenwoningen</strong> voor beter onderwijs. Tijdens deze reis ben ik de <strong>videograaf</strong> van het team: ik leg het bouwproces, de cultuur en de samenwerking vast. Zo bouw ik niet alleen voor een ander, maar ook aan mijzelf.</p>
-  </div>
-</div>
+        </article>
 
       </div>
     </div>
   </section>
 
-   <section id="ambitie" class="ambition">
-    <div class="container">
-      <h2>Ambitie</h2>
-      <p>Ik wil verhalen vertellen die blijven hangen. Niet zomaar mooie beelden maken, maar betekenis geven aan wat ik zie en voel — en dat doorvertalen naar werk dat iets doet met mensen. Mijn ambitie als CMD’er is om te groeien als <strong>visual storyteller</strong> en <strong>videograaf</strong> met een sterke ethische onderlaag. Ik wil impact maken met beeld, geluid en gevoel.</p>
+  <section id="over" class="about section">
+    <div class="container about-grid">
+      <div>
+        <p class="label">Wie ben ik?</p>
 
-      <p>Ik geloof dat ontwerp en media niet alleen entertainen, maar ook bewustzijn kunnen vergroten, verbinden en zelfs levens kunnen veranderen. Daarom wil ik werken bij of samenwerken met organisaties die maatschappelijke waarde centraal stellen — in de zorg, het onderwijs, ontwikkelingswerk of sociale campagnes. Mijn droom is om betrokken te zijn bij projecten die échte verhalen vertellen: kwetsbaar, eerlijk, visueel krachtig.</p>
+        <h2>Over DIDI</h2>
 
-      <p>Mijn talent ligt in het combineren van inhoud en vorm. Waar anderen misschien beginnen met pixels of post-productie, begin ik bij betekenis. Ik stel vragen: <em>Waarom maken we dit? Voor wie? Wat moet het aanwakkeren?</em> Die vragen vertaal ik vervolgens naar beeld: met kleur, compositie, tempo en ritme — zoals ik ook met piano speel: met gevoel en aandacht.</p>
+        <p>
+          Mijn naam is Diederick Douwe Benjamin Homans, maar noem me DIDI.
+          Ik ben een CMD-student die begint bij betekenis. Waar anderen misschien direct
+          naar techniek of stijl gaan, vraag ik eerst: waarom maken we dit, voor wie,
+          en wat moet het losmaken?
+        </p>
 
-      <p>De komende jaren wil ik me verder ontwikkelen in:</p>
-      <ul>
-        <li><strong>Camera- en regiewerk</strong>: sterker worden in het vangen van sfeer en emoties op locatie.</li>
-        <li><strong>Video-editing en sound design</strong>: om het ritme en de beleving nog krachtiger te maken.</li>
-        <li><strong>Documentaire of reportagestijl</strong>: omdat ik daar mijn gevoel voor echtheid, storytelling en maatschappelijke thema’s in kwijt kan.</li>
-        <li><strong>Ethisch ontwerpen</strong>: ontwerpen met waarden als eerlijkheid, eenvoud en transparantie.</li>
-      </ul>
+        <p>
+          Video, fotografie, vormgeving en storytelling zijn voor mij manieren om gevoel
+          zichtbaar te maken. Ik werk vaak op de achtergrond, maar wil mijn talenten
+          steeds sterker laten schijnen.
+        </p>
+      </div>
 
-      <p>Tijdens mijn reis naar <strong>Malawi</strong> als videograaf voor World Servants zie ik een kans om die ambitie in de praktijk te brengen. Ik ga daar bouwen voor een ander — letterlijk — maar óók bouwen aan mijn eigen verhaal. Door met beeld bij te dragen aan een project met betekenis, groeit mijn ambitie verder: om visueel werk te maken dat ertoe doet.</p>
-
-      <p>Uiteindelijk wil ik geen ‘maker’ zijn, maar een <strong>bouwer van verandering</strong>.</p>
+      <div class="portrait-card">
+        <img src="images/portret.jpg" alt="Portret van Diederick">
+      </div>
     </div>
   </section>
 
+  <section id="ambitie" class="ambition section">
+    <div class="container ambition-card">
 
-  <section id="overmij" class="about">
-    <div class="container">
-      <h2>Over Mij</h2>
-      <p>Mijn naam is Diederick Douwe Benjamin Homans – maar noem me gerust DIDI. Ik ben een CMD-student aan de Hanzehogeschool die gelooft dat ontwerp méér kan zijn dan mooi: het kan iets veranderen. Wat ik ontwerp is bedoeld om negativiteit om te buigen, vastzittende systemen open te breken en kleur te brengen op plekken waar het grijs is. Dit is wat ik mijn ‘prisma-gedachte’ noem: licht transformeren tot betekenisvolle kleur.</p>
-      <p>Anderen omschrijven mij als stil, maar gewetensvol. Rechtvaardig, gevoelig en zachtaardig. Ik ben niet altijd makkelijk te peilen, maar wie mij goed kent, ziet iemand die luistert om te begrijpen en die graag wil bijdragen. Ik zie wat anderen missen, zoek naar samenhang en probeer altijd te verbinden.</p>
-      <p>Ik ben sportief en muzikaal – ik speel piano, waarin ik gevoel en timing kwijt kan. In mijn ontwerpen wil ik diezelfde diepgang en harmonie vinden. Creativiteit komt voor mij voort uit rust: als ik te veel druk voel, schiet ik in mijn hoofd. Daarom wil ik leren om óók onder tijdsdruk mijn creativiteit te behouden.</p>
-      <p>Mijn ethisch kompas speelt een belangrijke rol in mijn werk. Ik geloof niet in ontwerpen voor haatdragende of schadelijke systemen. Ik wil ontwerpen voor verbinding, voor openheid en voor blijvende impact.</p>
+      <div class="ambition-content">
+        <p class="label">Richting</p>
 
-      <h2>Achter de prisma</h2>
-      <img src="images/portret.jpg" alt="Portret van Diederick" style="max-width: 300px; border-radius: 12px; margin: 1rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.3);" />
+        <h2>Ambitie</h2>
 
-      <h2>Skills & Interesses</h2>
-      <p>Mijn grootste fascinatie ligt bij <strong>videografie, storytelling en beeldbewerking</strong>. Ik werk veel en graag met <strong>Adobe After Effects</strong>, <strong>Premiere Pro</strong>, en <strong>Illustrator</strong>. Ook fotografie speelt daarin een rol, zeker als ik beelden kan inzetten om een boodschap krachtig te communiceren.</p>
-      <p>Daarnaast werk ik met <strong>HTML, CSS en Figma</strong>. Ik houd van conceptueel denken, van iets kleins iets groots maken, en ik blijf graag leren: hoe meer technieken ik onder de knie heb, hoe sterker mijn beeldtaal wordt.</p>
+        <p class="ambition-lead">
+          Ik zoek een stageplek waar beeld, verhaal en betekenis samenkomen.
+        </p>
+
+        <p>
+          Mijn richting ligt binnen videografie, visual storytelling, content creation
+          en conceptontwikkeling. Daarnaast heb ik veel interesse in editorial design:
+          magazines, visuele publicaties en projecten waarin typografie, ritme en lay-out
+          belangrijk zijn.
+        </p>
+
+        <p>
+          Tijdens het ontwerpen van de Almanak ontdekte ik hoe sterk mijn interesse ligt
+          bij Adobe InDesign, structuur en het bouwen van een consistente visuele stijl.
+          Ik zoek een plek waar ik mezelf verder kan ontwikkelen als maker,
+          verhalenverteller en vormgever — zowel digitaal als print.
+        </p>
+      </div>
+
+      <aside class="ambition-side">
+        <h3>Stage focus</h3>
+
+        <ul>
+          <li>Videografie</li>
+          <li>Visual storytelling</li>
+          <li>Content creation</li>
+          <li>Editorial design</li>
+          <li>Conceptontwikkeling</li>
+        </ul>
+
+        <div class="ambition-quote">
+          “Verandering zichtbaar maken.”
+        </div>
+      </aside>
+
+      <div class="skills ambition-skills">
+        <span>Videografie</span>
+        <span>Storytelling</span>
+        <span>InDesign</span>
+        <span>Premiere Pro</span>
+        <span>After Effects</span>
+        <span>Illustrator</span>
+        <span>Photoshop</span>
+        <span>Figma</span>
+        <span>HTML/CSS</span>
+      </div>
+
     </div>
   </section>
 
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Wil je samenwerken of meer weten? Neem gerust contact op.</p>
-      <p>Email: <a href="mailto:homansdiederick@gmail.com">homansdiederick@gmail.com</a><br/>
-         Tel: <a href="tel:+31628110364">06 28110364</a></p>
+  <section id="contact" class="contact section">
+    <div class="container narrow">
+      <p class="label">Contact</p>
+
+      <h2>Laten we iets maken dat verschil maakt.</h2>
+
+      <div class="contact-links">
+        <p>
+          Email:
+          <a href="mailto:homansdiederick@gmail.com">homansdiederick@gmail.com</a>
+        </p>
+
+        <p>
+          Tel:
+          <a href="tel:+31628110364">06 28110364</a>
+        </p>
+
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/diederick-homans" target="_blank">
+            Diederick Homans
+          </a>
+        </p>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 DIDI – Kleuren geïnspireerd door WOEI • Gemaakt met verandering (Δ)</p>
-    </div>
+  <footer class="footer">
+    <p>© 2026 DIDI — Create a Difference</p>
   </footer>
 
-  <!-- Video popup -->
-  <div id="videoPopup" class="video-popup">
-    <span class="close-btn" onclick="closeVideo()">&times;</span>
+  <!-- AMELAND POPUP -->
+  <div id="amelandPopup" class="video-popup">
+    <button class="close-btn" onclick="closeAmelandVideo()">×</button>
+
     <video controls>
-      <source src="videos/video-ameland.mp4" type="video/mp4" />
+      <source src="videos/video-ameland.mp4" type="video/mp4">
       Je browser ondersteunt dit videoformaat niet.
     </video>
   </div>
 
+  <!-- MALAWI POPUP -->
+  <div id="malawiPopup" class="video-popup">
+    <button class="close-btn" onclick="closeMalawiVideo()">×</button>
+
+    <div class="youtube-wrapper">
+      <iframe
+        id="malawiFrame"
+        src=""
+        title="Malawi Aftermovie"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+
+  <!-- ALMANAK POPUP -->
+  <div id="almanakPopup" class="almanak-popup">
+    <button class="close-btn" onclick="closeAlmanakPopup()">×</button>
+
+    <div class="almanak-content">
+
+      <div class="almanak-intro">
+        <p class="label">Editorial Design • Almanak der N.S.G. 2025/2026</p>
+
+        <h2>Almanak Excelsior</h2>
+
+        <p class="almanak-lead">
+          <strong>Excelsior</strong> betekent letterlijk “steeds hoger”.
+          Die gedachte heb ik vertaald naar een klassieke beeldtaal met goud,
+          donkergroen, monumentale typografie en verwijzingen naar groei,
+          ambitie en volharding.
+        </p>
+
+        <p>
+          In de tussenbladen komt dit thema terug via Sisyphus, die telkens opnieuw
+          zijn steen omhoog duwt. Ook gebruikte ik markante gebouwen uit Groningen
+          als visuele metafoor: elk onderdeel stijgt verder, van kleinere gebouwen
+          naar uiteindelijk de Martinitoren, het hoogste gebouw van Groningen.
+        </p>
+
+        <div class="almanak-meta">
+          <span>350+ pagina’s</span>
+          <span>100+ uur werk</span>
+          <span>Editorial design</span>
+          <span>Art direction</span>
+        </div>
+      </div>
+
+      <img src="images/kaft.jpg" alt="Kaft Almanak">
+      <img src="images/redactioneel.jpg" alt="Redactioneel">
+      <img src="images/Sociëteits&ereleden.jpg" alt="Sociëteits en ereleden">
+      <img src="images/Staf.jpg" alt="Staf">
+      <img src="images/bestuur-stichting-staf.jpg" alt="Bestuur stichting staf">
+      <img src="images/Preases.jpg" alt="Praeses">
+
+    </div>
+  </div>
+
   <script>
-    function openVideo() {
-      document.getElementById("videoPopup").classList.add("active");
+    function openAmelandVideo() {
+      document.getElementById("amelandPopup").classList.add("active");
+      document.body.classList.add("no-scroll");
     }
-    function closeVideo() {
-      const popup = document.getElementById("videoPopup");
+
+    function closeAmelandVideo() {
+      const popup = document.getElementById("amelandPopup");
       const video = popup.querySelector("video");
+
       popup.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+
       video.pause();
       video.currentTime = 0;
     }
+
+    function openMalawiVideo() {
+      const popup = document.getElementById("malawiPopup");
+      const frame = document.getElementById("malawiFrame");
+
+      frame.src = "https://www.youtube.com/embed/QdsepqkgNPk?autoplay=1";
+
+      popup.classList.add("active");
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeMalawiVideo() {
+      const popup = document.getElementById("malawiPopup");
+      const frame = document.getElementById("malawiFrame");
+
+      popup.classList.remove("active");
+      document.body.classList.remove("no-scroll");
+
+      frame.src = "";
+    }
+
+    function openAlmanakPopup() {
+      document.getElementById("almanakPopup").classList.add("active");
+      document.body.classList.add("no-scroll");
+    }
+
+    function closeAlmanakPopup() {
+      document.getElementById("almanakPopup").classList.remove("active");
+      document.body.classList.remove("no-scroll");
+    }
   </script>
+
 </body>
+
 </html>
